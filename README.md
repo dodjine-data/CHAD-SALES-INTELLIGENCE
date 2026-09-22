@@ -107,26 +107,3 @@ Dim_Client ───── Fact_Ventes ───── Dim_Produit
                        │
                        │
                    Dim_Ville
-## 📸 Aperçu du dashboard
-
-### 1. Executive Overview
-
-![Executive Overview](./Screenshots/executive_overview.png)
-
----
-
-### 2. Analyse commerciale
-
-![Analyse commerciale](./Screenshots/analyse_commerciale.png)
-
----
-
-### 3. Clients & Créances
-
-![Clients & Créances](./Screenshots/clients_creances.png)
-
----
-
-### 4. Analyse de la rentabilité
-
-![Analyse de la rentabilité](./Screenshots/rentabilite.png)
