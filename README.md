@@ -107,8 +107,6 @@ Dim_Client ───── Fact_Ventes ───── Dim_Produit
                        │
                        │
                    Dim_Ville
-
-
 ## 📸 Aperçu du dashboard
 
 ### 1. Executive Overview
