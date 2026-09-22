@@ -2,39 +2,53 @@
 
 ## Analyse des ventes, de la rentabilité et des créances d'une PME tchadienne
 
-**CHAD SALES INTELLIGENCE** est un projet de Business Intelligence réalisé avec **Microsoft Power BI** autour d'une PME fictive tchadienne : **TCHAD DISTRIBUTION SARL**.
+**CHAD SALES INTELLIGENCE** est un projet de Business Intelligence réalisé avec **Microsoft Power BI** autour d'une PME tchadienne fictive : **TCHAD DISTRIBUTION SARL**.
 
 L'objectif du projet est de transformer des données commerciales en informations utiles à la prise de décision à travers l'analyse des ventes, de la rentabilité, des clients, des créances, des produits, des villes et des commerciaux.
 
-> ⚠️ **Les données utilisées dans ce projet sont simulées à des fins pédagogiques et de portfolio. Elles ne représentent pas les données réelles d'une entreprise.**
+> ⚠️ **Important :** les données utilisées dans ce projet sont simulées à des fins pédagogiques et de portfolio. Elles ne représentent pas les données réelles d'une entreprise.
 
 ---
 
 ## 🎯 Objectifs du projet
 
-Le projet vise à :
+Ce projet vise à :
 
-- suivre le chiffre d'affaires ;
-- analyser la rentabilité ;
-- identifier les produits les plus performants ;
-- comparer les performances des commerciaux ;
-- analyser les performances par ville ;
+- analyser le chiffre d'affaires ;
+- mesurer la rentabilité et les marges ;
 - suivre les créances clients ;
+- analyser les ventes par ville ;
+- comparer la performance des commerciaux ;
+- identifier les produits et catégories les plus performants ;
 - analyser les modes de paiement ;
-- identifier les principaux insights commerciaux ;
-- formuler des recommandations à partir des données.
+- suivre l'évolution mensuelle des principaux indicateurs ;
+- construire un dashboard Power BI interactif ;
+- transformer les données commerciales en informations utiles à la décision.
 
 ---
 
-# 🗂️ Données utilisées
+## 🏢 Contexte
 
-Le modèle Power BI est construit autour d'une table de faits et de tables de dimensions.
+**Entreprise :** TCHAD DISTRIBUTION SARL  
+**Secteur :** Distribution de produits alimentaires et ménagers  
+**Pays :** Tchad  
+**Période analysée :** 2025
+
+Le dataset simulé représente des transactions commerciales réalisées dans plusieurs villes tchadiennes.
+
+L'entreprise fictive vend différents produits alimentaires et ménagers à plusieurs types de clients, avec plusieurs commerciaux et différents modes de paiement.
+
+---
+
+## 🗂️ Données utilisées
+
+Le modèle de données est composé de **6 tables**.
 
 ### Table de faits
 
-**Fact_Ventes**
+#### `Fact_Ventes`
 
-Elle contient notamment :
+Cette table contient les transactions commerciales :
 
 - Vente_ID
 - Date_ID
@@ -54,56 +68,61 @@ Elle contient notamment :
 
 ### Tables de dimensions
 
-- **Dim_Date** — informations temporelles
-- **Dim_Client** — informations sur les clients
-- **Dim_Produit** — produits et catégories
-- **Dim_Commercial** — commerciaux
-- **Dim_Ville** — villes, provinces et zones
+#### `Dim_Date`
+
+- Date_ID
+- Date
+- Annee
+- Mois_Numero
+- Mois
+- Trimestre
+- Jour
+- Jour_Semaine
+
+#### `Dim_Client`
+
+- Client_ID
+- Client
+- Ville_ID
+- Type_Client
+
+#### `Dim_Produit`
+
+- Produit_ID
+- Produit
+- Categorie
+- Prix_Unitaire
+- Cout_Unitaire
+
+#### `Dim_Commercial`
+
+- Commercial_ID
+- Commercial
+- Ville_Principale
+
+#### `Dim_Ville`
+
+- Ville_ID
+- Ville
+- Province
+- Zone
 
 ---
 
-# 🛠️ Technologies utilisées
+## ⭐ Modèle de données
 
-- **Microsoft Power BI**
-- **Power Query**
-- **DAX**
-- **Modélisation de données**
-- **Data Visualization**
-- **Analyse de données**
+Le projet utilise une architecture en étoile (**Star Schema**).
 
----
-
-# 🔄 Préparation et transformation des données
-
-Les données ont été préparées dans **Power Query** avant leur utilisation dans le modèle Power BI.
-
-Les principales étapes réalisées sont :
-
-1. Importation des différentes tables.
-2. Vérification et correction des en-têtes.
-3. Correction des types de données.
-4. Conversion des colonnes numériques.
-5. Vérification des données.
-6. Préparation des tables de dimensions.
-7. Création des relations entre les tables.
-8. Construction du modèle en étoile.
-
----
-
-# ⭐ Modèle de données
-
-Le modèle repose sur une architecture en étoile.
-
-La table **Fact_Ventes** est reliée aux différentes dimensions :
+`Fact_Ventes` constitue la table centrale et les différentes tables de dimensions permettent d'analyser les transactions selon plusieurs axes.
 
 ```text
-                    Dim_Date
-                       │
-                       │
-Dim_Client ───── Fact_Ventes ───── Dim_Produit
-                       │
-                       │
-                Dim_Commercial
-                       │
-                       │
-                   Dim_Ville
+                         Dim_Date
+                            │
+                            │
+Dim_Client ─────────── Fact_Ventes ─────────── Dim_Produit
+                            │
+                            │
+                    Dim_Commercial
+                            │
+                            │
+                        Dim_Ville
