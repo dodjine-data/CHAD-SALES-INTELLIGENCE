@@ -112,7 +112,7 @@ Dim_Client ───── Fact_Ventes ───── Dim_Produit
 ## 📸 Aperçu du dashboard
 
 ### Executive Overview
-![Executive Overview](Screenshots/executive_overview.png)
+<img src="Screenshots/executive_overview.png" alt="Executive Overview">
 
 ### Analyse commerciale
 ![Analyse commerciale](Screenshots/analyse_commerciale.png)
