@@ -1,0 +1,21 @@
+﻿Client_ID,Client,Ville_ID,Type_Client
+CL001,Al-Hayat Market,N'Djamena,Grossiste
+CL002,Marché Central SARL,N'Djamena,Grossiste
+CL003,Ets Al-Barka,N'Djamena,Détaillant
+CL004,Supermarché Chari,N'Djamena,Supermarché
+CL005,Ets La Réussite,Moundou,Détaillant
+CL006,Marché de Moundou,Moundou,Grossiste
+CL007,Ets Toumaï,Moundou,Détaillant
+CL008,Central Market Sarh,Sarh,Grossiste
+CL009,Ets Espoir,Sarh,Détaillant
+CL010,Supermarché du Ouaddaï,Abéché,Supermarché
+CL011,Ets Al-Amana,Abéché,Détaillant
+CL012,Marché d'Abéché,Abéché,Grossiste
+CL013,Ets Kélo Commerce,Kélo,Détaillant
+CL014,Marché de Kélo,Kélo,Grossiste
+CL015,Ets Bongor Plus,Bongor,Détaillant
+CL016,Marché de Bongor,Bongor,Grossiste
+CL017,Ets Doba Services,Doba,Détaillant
+CL018,Marché de Doba,Doba,Grossiste
+CL019,Ets Faya Sahel,Faya-Largeau,Détaillant
+CL020,Commerce du Borkou,Faya-Largeau,Grossiste
