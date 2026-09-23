@@ -126,3 +126,31 @@ Dim_Client ─────────── Fact_Ventes ───────�
                             │
                             │
                         Dim_Ville
+---
+## 📊 Aperçu du dashboard
+
+Le dashboard Power BI est organisé en quatre pages principales afin de suivre les performances commerciales, la rentabilité et les créances clients.
+
+### 1. Executive Overview
+
+Vue globale de l'activité commerciale avec les principaux KPI, l'évolution du chiffre d'affaires, les performances par ville, les produits et les catégories.
+
+![Executive Overview](./Screenshots/executive_overview.png)
+
+### 2. Analyse commerciale
+
+Analyse des performances des commerciaux, du chiffre d'affaires par ville, des quantités vendues par produit et de la répartition du chiffre d'affaires par catégorie.
+
+![Analyse commerciale](./Screenshots/analyse_commerciale.png)
+
+### 3. Clients & Créances
+
+Suivi des créances clients, des paiements, des ventes à crédit et de la répartition des créances par client, ville et commercial.
+
+![Clients & Créances](./Screenshots/clients_creances.png)
+
+### 4. Analyse de la rentabilité
+
+Analyse du chiffre d'affaires, des coûts, du bénéfice et des marges par produit, catégorie, ville et commercial.
+
+![Rentabilité](./Screenshots/rentabilite.png)
